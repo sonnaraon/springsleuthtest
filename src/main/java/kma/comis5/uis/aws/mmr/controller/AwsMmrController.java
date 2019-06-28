@@ -8,9 +8,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,14 +22,11 @@ public class AwsMmrController {
 	@Resource(name = "awsMmrService")
 	private AwsMmrService awsMmrService;
 
-	/** Log Info */
-	private static final Logger log = LogManager.getLogger(AwsMmrController.class);
 
 	@RequestMapping(value = "/comis5/uis/aws/test/weatherman.do")
 	public String WeathermanTestMain(HttpServletRequest req, HttpServletResponse res, ModelMap model) throws Exception {
 
 		String rtnUrl = "/comis5/uis/aws/mmr/index";
-		log.debug(req.getServletPath());
 		return rtnUrl;
 	}
 
@@ -56,8 +50,7 @@ public class AwsMmrController {
 		UISMap returnData = new UISMap();
 		returnData.set("result", result);
 		returnData.set("input", reqData);
-		log.debug("controller Data >> " + reqData);
-		log.debug("controller Data >> " + returnData);
+
 
 		model.addAttribute("input", reqData);
 		model.addAttribute("data", returnData);

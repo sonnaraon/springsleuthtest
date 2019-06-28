@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Leaflet + D3 + AfsMap</title>
+<meta charset="EUC-KR" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- leaflet -->
+<link rel="stylesheet" href="./lib/css/leaflet.css"/>
+<link rel="stylesheet" href="./lib/css/leaflet-panel-layers.src.css" />
+<!-- ion.rangeSlider -->
+<link rel="stylesheet" href="./lib/css/ion.rangeSlider.css" />
+<!-- fontawesome -->
+<link rel="stylesheet" href="./lib/css/fontawesome/css/all.css" />
+
+<!--  jQuery -->
+<script type="text/javascript" src="./lib/js/jquery/jquery-3.4.1.min.js"></script>
+
+<!-- ion.rangeSlider -->
+<script type="text/javascript" src="./lib/js/ion.rangeSlider/ion.rangeSlider.js"></script>
+
+<!-- moment -->
+<script type="text/javascript" src="./lib/js/moment/moment.js"></script>
+
+<!-- lodash -->
+<script type="text/javascript" src='./lib/js/lodash/lodash.min.js'></script>
+
+<!--  map common -->
+<script type="text/javascript" src="./lib/js/mapConfig.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./lib/js/mapCommon.js" charset="UTF-8"></script>
+
+<!--  leaflet -->
+<script type="text/javascript" src="./lib/js/leaflet/leaflet.js?dfs"></script>
+<script type="text/javascript" src="./lib/js/proj4/proj4.js"></script>
+<script type="text/javascript" src="./lib/js/proj4leaflet/proj4leaflet.js"></script>
+<script type="text/javascript" src="./lib/js/AfsMapTmsProviders/Leaflet.AfsMapTmsProviders.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./lib/js/leaflet-panel-layers/leaflet-panel-layers.src.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./lib/js/leaflet-Graticule/L.Graticule.js"></script>
+<script type="text/javascript" src='./lib/js/AfsWindLayder/leaflet.AFS.WindConfig.js?q=1' charset="UTF-8"></script>
+<script type="text/javascript" src='./lib/js/AfsWindLayder/leaflet.AFS.WindOverlay.js?q=1' charset="UTF-8"></script>
+
+<!--  d3 -->
+<script type="text/javascript" src="./lib/js/d3/d3.js"></script>
+<script type="text/javascript" src="./lib/js/d3-color/d3-color.js"></script>
+<script type="text/javascript" src="./lib/js/d3-contour/d3-contour.js"></script>
+<script type="text/javascript" src="./lib/js/d3-transition/d3-transition.js"></script>
+<!-- leaflet-D3SvgOverlay -->
+<script type="text/javascript" src="./lib/js/leaflet-D3SvgOverlay/L.D3SvgOverlay.js"></script>
+
+<!-- �밸낫援ъ�� -->
+<script type="text/javascript" src="giscoord_land.js"></script>
+<script type="text/javascript" src="giscoord_landsea.js"></script>
+<script type="text/javascript"></script>
+
+
+<script type="text/javascript" src="./lib/js/cctv/cctv.js"></script>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/*  踰�濡� css  */
+.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; }
+.info h4 { margin: 0 0 5px; color: #777; }
+.legend { text-align: left; /* line-height: 14px; */; color: #555; }
+.legend i { width: 14px; height: 14px; float: left; margin-right: 8px; opacity: 0.7; }
+
+</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script type="text/javascript" src="./map_dev.js" charset="UTF-8"></script>
+</body>
+</html>

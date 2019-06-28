@@ -23,19 +23,17 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
-import kma.comis5.kaf.common.util.StringUtil;
+import kma.kaf.common.util.StringUtil;
 import kma.comis5.uis.aws.mmr.service.AwsMmrService;
 import kma.comis5.uis.aws.mmr.service.Config_ShrtSrv30;
 import kma.comis5.uis.aws.mmr.service.DFSShrtTimeSequenceSrv30;
 import kma.comis5.uis.common.util.DateUtil;
 import kma.comis5.uis.common.util.UISMap;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 
-import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+//import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
 /**
  * (여기에 클래스 설명을 기재합니다.)
@@ -44,10 +42,8 @@ import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
  *
  */
 @Service("awsMmrService")
-public class AwsMmrServiceImpl extends EgovAbstractServiceImpl implements AwsMmrService {
+public class AwsMmrServiceImpl /*extends EgovAbstractServiceImpl*/ implements AwsMmrService {
 
-	/** Log Info */
-	private static final Logger log = LogManager.getLogger(AwsMmrServiceImpl.class);
 	
 	public UISMap retrieveData(UISMap reqData) throws Exception {
 
@@ -89,13 +85,12 @@ public class AwsMmrServiceImpl extends EgovAbstractServiceImpl implements AwsMmr
 		// GEMD
 		String basePath = "\\\\192.168.2.129\\data\\DFSD\\SHRT\\" + yyyymm + "\\" + dd + "/";
 
-		log.debug(">>>>>>>>>" + basePath);
 
 		try {
 			tm = new DFSShrtTimeSequenceSrv30(nowCal);
 			convert = getIfsSvrwShrtBinaryData(param.getString("readData"), tm, basePath, param.getString("dataType"));
 		} catch (IOException e) {
-			log.error(this.getClass().getName() + ".retrieveSvcTplShrtData() Error : " + e.toString());
+			
 		}
 
 		return convert;

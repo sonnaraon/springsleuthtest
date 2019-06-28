@@ -55,7 +55,7 @@
 		</repository>
 		<repository>
 			<id>public</id>
-			<url>http://nexus-devserver.192.168.2.128.nip.io/nexus/content/groups/public/</url>
+			<url>http://192.168.2.129:6060/nexus/content/repositories/thirdparty/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -64,20 +64,6 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>central</id>
-			<url>http://nexus-devserver.192.168.2.128.nip.io/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<dependencies>
 		<dependency>
@@ -102,7 +88,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		<dependency>
+ 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
@@ -113,6 +99,10 @@
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.tomcat.embed</groupId>
+					<artifactId>tomcat-embed-websocket</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -151,11 +141,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
@@ -165,9 +150,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.tibero.jdbc</groupId>
+			<groupId>com.tmax</groupId>
 			<artifactId>tibero5-jdbc</artifactId>
-			<version>1.0</version>
+			<version>5.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -229,14 +214,17 @@
 			<version>1.0.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 	</dependencies>
 
