@@ -23,6 +23,8 @@
 	</properties>
 
 	<repositories>
+	<!-- 내부망 사용으로 인해 외부 Repository 사용 불가능 -->
+	<!-- 
 		<repository>
 			<id>mvn2</id>
 			<url>http://repo1.maven.org/maven2/</url>
@@ -53,9 +55,10 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+	 -->
 		<repository>
 			<id>public</id>
-			<url>http://192.168.2.129:6060/nexus/content/repositories/thirdparty/</url>
+			<url>http://192.168.2.151:8081/nexus/content/repositories/thirdparty/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
