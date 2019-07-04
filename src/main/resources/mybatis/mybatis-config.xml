@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<package name="kma.comis5.sample.domain" />
+		<package name="kma.sample.domain" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/mapper/Test-Mapper.xml" />
