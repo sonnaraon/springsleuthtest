@@ -23,39 +23,14 @@
 	</properties>
 
 	<repositories>
-	<!-- 내부망 사용으로 인해 외부 Repository 사용 불가능 -->
-	<!-- 
-		<repository>
-			<id>mvn2</id>
-			<url>http://repo1.maven.org/maven2/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>egovframe</id>
-			<url>http://www.egovframe.go.kr/maven/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>egovframe2</id>
-			<url>http://maven.egovframe.kr:8080/maven/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	 -->
+		<!-- 내부망 사용으로 인해 외부 Repository 사용 불가능 -->
+		<!-- <repository> <id>mvn2</id> <url>http://repo1.maven.org/maven2/</url> 
+			<releases> <enabled>true</enabled> </releases> <snapshots> <enabled>true</enabled> 
+			</snapshots> </repository> <repository> <id>egovframe</id> <url>http://www.egovframe.go.kr/maven/</url> 
+			<releases> <enabled>true</enabled> </releases> <snapshots> <enabled>false</enabled> 
+			</snapshots> </repository> <repository> <id>egovframe2</id> <url>http://maven.egovframe.kr:8080/maven/</url> 
+			<releases> <enabled>true</enabled> </releases> <snapshots> <enabled>false</enabled> 
+			</snapshots> </repository> -->
 		<repository>
 			<id>public</id>
 			<url>http://192.168.2.151:8081/nexus/content/repositories/thirdparty/</url>
@@ -91,7 +66,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
@@ -223,6 +198,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.tmax</groupId>
+			<artifactId>tibero5-jdbc</artifactId>
+			<version>5.0.0</version>
 		</dependency>
 	</dependencies>
 
