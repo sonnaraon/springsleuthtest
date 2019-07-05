@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
-	<context-root>/sample</context-root>
+	<context-root>/</context-root>
   	<resource-ref>
 		<res-ref-name>jdbc/SVC_APP</res-ref-name>
 		<jndi-name>java:/SVC_APP</jndi-name>
