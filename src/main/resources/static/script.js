@@ -515,7 +515,7 @@ var MapContent = {
 		async drawOverlay() {
 			var { tmFc, readData, dataType } = this
 
-			var response = await axios.get('/comis5/uis/aws/mmr/retMmrWeathermanTest.kajx', {
+			var response = await axios.get('comis5/uis/aws/mmr/retMmrWeathermanTest.kajx', {
 //			var response = await axios.get('/comis5/uis/aws/mmr/retMmrTxtTest.kajx', {
 				params: {
 					tmFc,
