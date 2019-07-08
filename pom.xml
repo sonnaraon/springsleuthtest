@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>kma.comis5</groupId>
 	<artifactId>template</artifactId>
-<!-- 	<version></version> -->
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>comis5Template</name>
 	<description>Demo project for Spring Boot</description>
@@ -219,6 +219,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>template</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
