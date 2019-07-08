@@ -10,8 +10,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>kma.comis5</groupId>
-	<artifactId>comis5Template</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>template</artifactId>
+	<version></version>
 	<packaging>war</packaging>
 	<name>comis5Template</name>
 	<description>Demo project for Spring Boot</description>
