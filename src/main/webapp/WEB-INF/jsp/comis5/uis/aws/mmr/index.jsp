@@ -8,7 +8,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
- 		<base href="<c:url value='/'/>">
+ 		<%-- <base href="<c:url value='/'/>"> --%>
 		<title>동네예보 모바일</title>
 		<link rel="icon" href="data:;base64,iVBORw0KGgo=" />
  			<!-- 경로 변경(Yang) -->
