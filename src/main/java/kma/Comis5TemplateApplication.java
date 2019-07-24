@@ -14,7 +14,8 @@ public class Comis5TemplateApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Comis5TemplateApplication.class, args);
 		
-		System.out.println("Code Modified");
+// 		코드에 System.out.println을 사용하지 마세요.
+// 		System.out.println("Code Modified");
 	}
 
 }
