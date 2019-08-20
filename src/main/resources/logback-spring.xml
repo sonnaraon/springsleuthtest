@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
@@ -36,43 +35,4 @@
 	<root level="INFO">
 		<appender-ref ref="console" />
 	</root>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
-    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
-	<conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
-
-	<property name="FILE_LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5LEVEL] [%logger{36}:%L] ### %msg%n" />
-
-	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
-	<springProperty scope="context" name="springAppName" source="spring.application.name" />
-	<property name="CONSOLE_LOG_PATTERN" value="[logback]%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [${springAppName},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-}] %m%n" />
-	
-	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
-		</encoder>
-	</appender>
-	<!-- <appender name="STASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logback/spring.log</file>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>logback/spring.&d{yyyy-MM-dd}.log</fileNamePattern>
-			<maxHistory>7</maxHistory>
-		</rollingPolicy>
-		<encoder class="net.logstash.logback.encoder.LogstashEncoder" />
-	</appender> -->
-	<!-- <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<pattern>[logback]%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-		</encoder>
-	</appender>
-	<logger name="java.sql" level="DEBUG"/>
-	<logger name="egovframework" level="DEBUG"/>
-	<logger name="jdbc.sqltiming" level="DEBUG"/>
-	<logger name="org.springframework" level="DEBUG"/> -->
-	<root level="INFO">
-		<appender-ref ref="console" />
-	</root>
->>>>>>> branch 'master' of http://192.168.2.151/root/template
 </configuration>
