@@ -8,7 +8,8 @@
 	<logger name="java.sql" level="DEBUG"/>
 	<logger name="egovframework" level="DEBUG"/>
 	<logger name="jdbc.sqltiming" level="DEBUG"/>
-	<logger name="org.springframework" level="DEBUG"/>
+	<logger name="org.springframework" level="INFO"/>
+	<logger name="org.apache.ibatis" level="INFO" />
 	<root level="DEBUG">
 		<appender-ref ref="STDOUT" />
 	</root>
