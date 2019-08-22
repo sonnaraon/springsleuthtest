@@ -3,10 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kma.sample.mapper.TestMapper">
-	<select id="selectTest" resultType="ReturnVO">
+	<select id="selectTest" resultType="String">
 		SELECT *
-		FROM TEST_TABLE
-		WHERE test_col2 = #{num}
-		AND test_col3 = '${content}'
+		FROM DUAL
 	</select>
 </mapper>
