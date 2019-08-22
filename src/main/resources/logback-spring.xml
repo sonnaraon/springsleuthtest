@@ -15,7 +15,18 @@
 			<Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
 		</encoder>
 	</appender>
-	<!-- <appender name="STASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logFile.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logFile.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+    <!-- <appender name="STASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>logback/spring.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logback/spring.&d{yyyy-MM-dd}.log</fileNamePattern>
@@ -34,5 +45,6 @@
 	<logger name="org.springframework" level="DEBUG"/> -->
 	<root level="INFO">
 		<appender-ref ref="console" />
+		<appender-ref ref="file" />
 	</root>
 </configuration>
