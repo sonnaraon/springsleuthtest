@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @Service("loggingService")
 @Transactional
 public class LoggingService {
-	Logger logger = LoggerFactory.getLogger(TestService.class);
+	Logger logger = LoggerFactory.getLogger(LoggingService.class);
 
 	@Autowired
 	private RestTemplate restTemplate;
@@ -22,6 +22,8 @@ public class LoggingService {
 	}
 
 	public String testServiceMethod() {
+		logger.info("###################################################");
+		System.out.println("==================================================");
 		return restTemplate.toString();
 
 	}
