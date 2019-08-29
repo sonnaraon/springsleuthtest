@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-
 	<conversionRule conversionWord="clr"
 		converterClass="org.springframework.boot.logging.logback.ColorConverter" />
 	<conversionRule conversionWord="wex"
@@ -10,7 +9,6 @@
 
 	<property name="FILE_LOG_PATTERN"
 		value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%logger{36}:%L] ### %msg%n" />
-
 
 	<include
 		resource="org/springframework/boot/logging/logback/defaults.xml" />
@@ -29,11 +27,12 @@
 	<appender name="file"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>spring.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>spring.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>30</maxHistory>
-            <totalSizeCap>1GB</totalSizeCap>
-        </rollingPolicy>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>spring.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+			<totalSizeCap>1GB</totalSizeCap>
+		</rollingPolicy>
 		<encoder>
 			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
 		</encoder>
@@ -43,5 +42,4 @@
 		<appender-ref ref="console" />
 		<appender-ref ref="file" />
 	</root>
-
 </configuration>
