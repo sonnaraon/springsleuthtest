@@ -40,6 +40,7 @@ class ELKController {
 	public String helloWorld() {
 		String response = "Hello user ! " + new Date();
 		LOG.log(Level.INFO, "/elkdemo - > " + response);
+		LOG.info("====================");
 
 		return response;
 	}
@@ -50,6 +51,7 @@ class ELKController {
 		String response = restTemplete.exchange("http://192.168.2.167:8080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 		}).getBody();
 		LOG.log(Level.INFO, "/elk - > " + response);
+		LOG.info("/////////////////////////");
 
 		try {
 			String exceptionrsp = restTemplete.exchange("http://192.168.2.167:8080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
@@ -66,6 +68,7 @@ class ELKController {
 	@RequestMapping(value = "/exception")
 	public String exception() {
 		String rsp = "";
+		LOG.info("--------------------");
 		try {
 			int i = 1 / 0;
 			// should get exception
