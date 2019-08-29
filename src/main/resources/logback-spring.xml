@@ -26,22 +26,23 @@
 		</encoder>
 	</appender>
 
-	<appender name="STASH"
+	<appender name="file"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>logback/spring.log</file>
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logback/spring.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<maxHistory>7</maxHistory>
+			<maxHistory>30</maxHistory>
+			<totalSizeCap>1GB</totalSizeCap>
 		</rollingPolicy>
-		<encoder class="net.logstash.logback.encoder.LogstashEncoder" />
-
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+		</encoder>
 	</appender>
-
 
 	<root level="INFO">
 		<appender-ref ref="console" />
-		<appender-ref ref="STASH" />
+		<appender-ref ref="file" />
 	</root>
 
 </configuration>
