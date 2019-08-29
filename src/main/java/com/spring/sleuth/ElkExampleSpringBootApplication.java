@@ -47,12 +47,12 @@ class ELKController {
 	@RequestMapping(value = "/elk")
 	public String helloWorld1() {
 
-		String response = restTemplete.exchange("http://localhost:8080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+		String response = restTemplete.exchange("http://192.168.2.167:8080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 		}).getBody();
 		LOG.log(Level.INFO, "/elk - > " + response);
 
 		try {
-			String exceptionrsp = restTemplete.exchange("http://localhost:8080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+			String exceptionrsp = restTemplete.exchange("http://192.168.2.167:8080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 			}).getBody();
 			LOG.log(Level.INFO, "/elk trying to print exception - > " + exceptionrsp);
 			response = response + " === " + exceptionrsp;
