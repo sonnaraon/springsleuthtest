@@ -24,41 +24,20 @@ public class ElkExampleController {
 	@Resource(name = "elkExampleService")
 	ElkExampleService elkExampleService;
 
-	@Autowired
-	RestTemplate restTemplete;
-
-	@Bean
-	RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
 
 	@RequestMapping(value = "/elkdemo")
 	public String helloWorld() {
 		String response = "Hello user ! " + new Date();
 		LOG.log(Level.INFO, "/elkdemo - > " + response);
 		LOG.info("====================");
-		String rtn = elkExampleService.testServiceMethod(response);
+		String rtn = elkExampleService.elkDemoServiceMethod(response);
 		return rtn;
 	}
 
 	@RequestMapping(value = "/elk")
 	public String helloWorld1() {
-		String rtn = "";
-		String response = restTemplete.exchange("http://192.168.2.167:8080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
-		}).getBody();
-		LOG.log(Level.INFO, "/elk - > " + response);
-		LOG.info("/////////////////////////");
-
-		try {
-			String exceptionrsp = restTemplete.exchange("http://192.168.2.167:8080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
-			}).getBody();
-			LOG.log(Level.INFO, "/elk trying to print exception - > " + exceptionrsp);
-			response = response + " === " + exceptionrsp;
-			rtn = elkExampleService.testServiceMethod(response);
-		} catch (Exception e) {
-			// exception should not reach here. Really bad practice :)
-		}
-
+		System.out.println("???????????????????????????????????????????????");
+		String rtn = elkExampleService.elkServiceMethod();
 		return rtn;
 	}
 
