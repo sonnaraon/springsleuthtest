@@ -31,13 +31,13 @@ public class ElkExampleService {
 
 	public String elkServiceMethod() {
 		logger.info("########################################################################################");
-		String response = restTemplate.exchange("http://localhost:18080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+		String response = restTemplate.exchange("http://localhost:8080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 		}).getBody();
 		logger.log(Level.INFO, "/elk - > " + response);
 		logger.info("/////////////////////////");
 
 		try {
-			String exceptionrsp = restTemplate.exchange("http://localhost:18080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+			String exceptionrsp = restTemplate.exchange("http://localhost:8080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 			}).getBody();
 			logger.log(Level.INFO, "/elk trying to print exception - > " + exceptionrsp);
 			response = response + " === " + exceptionrsp;
