@@ -1,8 +1,6 @@
 package com.spring.sleuth.sample.service;
 
 import java.util.logging.Level;
-
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -11,8 +9,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
-
-import com.spring.sleuth.sample.controller.ElkExampleController;
 
 @Service("elkExampleService")
 @Transactional

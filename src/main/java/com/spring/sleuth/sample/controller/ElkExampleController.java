@@ -5,17 +5,10 @@ import java.io.StringWriter;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
 import com.spring.sleuth.sample.service.ElkExampleService;
 
 @RestController
@@ -23,7 +16,6 @@ public class ElkExampleController {
 	private static final Logger LOG = Logger.getLogger(ElkExampleController.class.getName());
 	@Resource(name = "elkExampleService")
 	ElkExampleService elkExampleService;
-
 
 	@RequestMapping(value = "/elkdemo")
 	public String helloWorld() {
