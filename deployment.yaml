@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: 192.168.56.100:5000/eks/springsleuthtest:latest
+        image: 10.0.31.98:5000/eks/springsleuthtest:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
