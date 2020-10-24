@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-deployment
+  labels:
+    app: springboot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot
+  template:
+    metadata:
+      labels:
+        app: springboot
+    spec:
+      containers:
+      - name: springboot
+        image: 192.168.56.100:5000/eks/springsleuthtest:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      nodeSelector:
+        key: worker
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot
+spec:
+  selector:
+    app: springboot
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: springboot-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/schema: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/subnet: subnet-09ab6e9681ccc1d5f,subnet-03a0540fedf080b86
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: springboot
+          servicePort: 8080
+        path: /*
