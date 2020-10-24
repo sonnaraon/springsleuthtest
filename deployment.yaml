@@ -40,9 +40,9 @@ metadata:
   name: springboot-ingress
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/schema: internet-facing
+    alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/subnet: subnet-09ab6e9681ccc1d5f,subnet-03a0540fedf080b86
+    alb.ingress.kubernetes.io/subnets: subnet-09ab6e9681ccc1d5f,subnet-03a0540fedf080b86
 spec:
   rules:
   - http:
