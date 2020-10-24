@@ -1,0 +1,145 @@
+[v-cloak] {
+	display: none;
+}
+
+/* app common css */
+.application {
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color: #f5f5f5 !important;
+}
+html,
+body,
+#vue-app,
+#app,
+.application--wrap {
+	height: 100vh;
+}
+.app-header,
+.app-bottom {
+	flex: 0 0 auto;
+}
+.app-content {
+	flex: 1 1 auto;
+	position: relative; /* need this to position inner content */
+	overflow-y: auto;
+}
+
+/* toolbar */
+.v-toolbar__content {
+	justify-content: space-between;
+}
+.v-toolbar__content,
+.v-toolbar__content .fa-bars {
+	font-size: 16px;
+}
+.v-toolbar__title {
+	font-size: 17px;
+}
+.view-tab {
+	border-bottom: 1px solid #e0e0e0;
+}
+.view-tab .v-tabs__container {
+	height: 38px;
+}
+
+/* main */
+.select-box.v-text-field.v-text-field--solo .v-input__control {
+	min-height: 20px;
+}
+.select-box.v-text-field.v-text-field--solo .v-input__control .v-input__slot {
+	min-height: 20px;
+	padding: 0 5px;
+}
+.select-box .v-input__slot,
+.select-box .v-label {
+	font-size: 13px;
+}
+.select-box .v-input__icon {
+	min-width: 15px;
+	width: 15px;
+}
+.select-box .v-icon {
+	font-size: 13px;
+}
+.select-box .v-input__append-inner {
+	padding-left: 0;
+}
+.select-box .v-select__selection {
+	margin-right: 0;
+	max-width: 100%;
+}
+.select-box .v-text-field__slot input {
+	margin-top: 0;
+}
+
+/* bottom */
+.app-bottom .fas {
+	font-size: 20px;
+	margin-bottom: 4px;
+}
+.app-bottom.v-item-group.v-bottom-nav .v-btn {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.app-bottom.v-item-group.v-bottom-nav .v-btn--active .v-btn__content {
+	font-size: 12px;
+}
+
+/* additional css */
+.time-group-btn > button {
+	padding: 0 !important;
+	flex-grow: 1 !important;
+}
+.wind-switch {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	z-index: 1000;
+}
+.wind-switch .v-input__slot {
+	margin-bottom: 0 !important;
+}
+.wind-switch.v-input--switch .v-input--selection-controls__input {
+	margin-right: 3px;
+}
+.wind-switch .v-label {
+	color: #666;
+	font-size: 12px;
+}
+.custom-card:last-child {
+	margin-bottom: 0 !important;
+}
+.thumb-label {
+	font-size: 9px;
+}
+
+/* map */
+#map-content {
+	position: relative;
+	margin: 0 auto;
+}
+#fc-border {
+	position: absolute;
+	pointer-events: none;
+	touch-action: none;
+	border: 1px solid #000;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+#fc-map {
+	position: relative;
+	z-index: 0;
+}
+#fc-color-index {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-left: 1px solid #000;
+}
+.leaflet-control-attribution {
+	display: none;
+}
+.leaflet-container.leaflet-touch-zoom {
+	touch-action: none;
+}
