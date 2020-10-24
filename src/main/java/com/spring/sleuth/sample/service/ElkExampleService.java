@@ -29,11 +29,11 @@ public class ElkExampleService {
 	}
 
 	public String elkServiceMethod() {
-		String response = restTemplate.exchange("http://localhost:8080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+		String response = restTemplate.exchange("http://springboot2.default:8080/elkdemo", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 		}).getBody();
 
 		try {
-			String exceptionrsp = restTemplate.exchange("http://localhost:8080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+			String exceptionrsp = restTemplate.exchange("http://springboot2.default:8080/exception", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 			}).getBody();
 			response = response + " ================= " + exceptionrsp;
 		} catch (Exception e) {
