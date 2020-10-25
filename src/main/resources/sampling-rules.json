@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "description": "Main Page.",
+      "host": "*",
+      "http_method": "*",
+      "url_path": "/elk/*",
+      "fixed_target": 0,
+      "rate": 0.05
+    },
+    {
+      "description": "Sub Page1.",
+      "host": "*",
+      "http_method": "*",
+      "url_path": "/elkdemo/*",
+      "fixed_target": 0,
+      "rate": 0.05
+    },
+    {
+      "description": "Sub Page2.",
+      "host": "*",
+      "http_method": "*",
+      "url_path": "/exception/*",
+      "fixed_target": 0,
+      "rate": 0.05
+    }
+  ],
+  "default": {
+    "fixed_target": 1,
+    "rate": 0.1
+  }
+}
