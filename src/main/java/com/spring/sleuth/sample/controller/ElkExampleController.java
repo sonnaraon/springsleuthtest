@@ -17,18 +17,18 @@ public class ElkExampleController {
 	@Resource(name = "elkExampleService")
 	ElkExampleService elkExampleService;
 
-//	@RequestMapping(value = "/elkdemo")
-//	public String helloWorld() {
-//		String response = "Hello user ! " + new Date();
-//		String rtn = elkExampleService.elkDemoServiceMethod(response);
-//		return rtn;
-//	}
-//
-//	@RequestMapping(value = "/elk")
-//	public String helloWorld1() {
-//		String rtn = elkExampleService.elkServiceMethod();
-//		return rtn;
-//	}
+	@RequestMapping(value = "/elkdemo")
+	public String helloWorld() {
+		String response = "Hello user ! " + new Date();
+		String rtn = elkExampleService.elkDemoServiceMethod(response);
+		return rtn;
+	}
+
+	@RequestMapping(value = "/elk")
+	public String helloWorld1() {
+		String rtn = elkExampleService.elkServiceMethod();
+		return rtn;
+	}
 
 	@RequestMapping(value = "/exception")
 	public String exception() {
