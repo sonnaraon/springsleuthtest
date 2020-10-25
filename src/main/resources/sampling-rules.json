@@ -1,57 +1,17 @@
 {
-  "version": 2,
+  "version": 1,
   "rules": [
-    {
-      "description": "Main Page.",
-      "host": "*",
-      "http_method": "*",
-      "url_path": "/elk",
-      "fixed_target": 0,
-      "rate": 1.0
-    },
-    {
-      "description": "Main Page-1.",
-      "host": "*",
-      "http_method": "*",
-      "url_path": "/elk/*",
-      "fixed_target": 0,
-      "rate": 1.0
-    },
-    {
-      "description": "Sub Page1.",
-      "host": "*",
-      "http_method": "*",
-      "url_path": "/elkdemo",
-      "fixed_target": 0,
-      "rate": 1.0
-    },
-    {
-      "description": "Sub Page1-1.",
-      "host": "*",
-      "http_method": "*",
-      "url_path": "/elkdemo/*",
-      "fixed_target": 0,
-      "rate": 1.0
-    },
-    {
-      "description": "Sub Page2.",
-      "host": "*",
-      "http_method": "*",
-      "url_path": "/exception",
-      "fixed_target": 0,
-      "rate": 1.0
-    },
-    {
-      "description": "Sub Page2-1.",
-      "host": "*",
-      "http_method": "*",
-      "url_path": "/exception/*",
-      "fixed_target": 0,
-      "rate": 1.0
-    }
+ {
+   "description": "XRay Test.",
+   "service_name": "*",
+   "http_method": "*",
+   "url_path": "*",
+   "fixed_target": 0,
+   "rate": 1
+ }
   ],
   "default": {
-    "fixed_target": 1,
-    "rate": 0.1
+ "fixed_target": 1,
+ "rate": 1
   }
-}
+}  
