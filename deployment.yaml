@@ -20,6 +20,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        env:
+        - name: AWS_XRAY_DAEMON_ADDRESS 
+          value: xray-service:2000
 ---
 apiVersion: v1
 kind: Service
