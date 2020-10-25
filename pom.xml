@@ -173,6 +173,11 @@
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-xray-recorder-sdk-sql-mysql</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-xray-recorder-sdk-spring</artifactId>
+			<version>2.4.0</version>
+		</dependency>
 	</dependencies>
 	<!-- AWS XRAY -->
 	<dependencyManagement>

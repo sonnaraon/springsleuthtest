@@ -10,8 +10,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
+import com.amazonaws.xray.spring.aop.XRayEnabled;
+
 @Service("elkExampleService")
 @Transactional
+@XRayEnabled
 public class ElkExampleService {
 	private static final Logger logger = LoggerFactory.getLogger(ElkExampleService.class);
 
