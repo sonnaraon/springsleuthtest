@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
 	<listener>
-		<listener-class>com.myapp.web.Startup</listener-class>
+		<listener-class>com.spring.sleuth.config.WebConfig</listener-class>
 	</listener>
 </web-app>
